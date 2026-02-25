@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosecha Monetaria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <section class="health-card">
+            <div class="card-header">
+                <span>Diagnóstico de Salud</span>
+                <span id="health-badge" class="badge">CALCULANDO...</span>
+            </div>
+            <div class="score-value"><span id="health-score">0</span> <small>/100</small></div>
+            <div class="progress-bar">
+                <div id="health-fill" class="fill" style="width: 0%;"></div>
+            </div>
+            <p id="health-msg" class="status-msg">Analizando tu cosecha...</p>
+        </section>
+
+        <nav class="bottom-nav">
+            <div class="nav-item active">🏠<center>Resumen</center>
+            </div>
+            <div class="nav-item">📈<center>Ingresos</center>
+            </div>
+            <div class="nav-item">📉<center>Gastos</center>
+            </div>
+            <div class="nav-item">🌱<center>Metas</center>
+            </div>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+
+    <div class="app-container">
+        <header class="main-header">
+            <div class="logo">🌱 Cosecha Monetaria</div>
+            <div class="notif-icon">🔔</div>
+        </header>
+
+        <section class="input-card card">
+            <h3>🌱 Sembrar Datos</h3>
+            <form id="finance-form">
+                <div class="input-group">
+                    <input type="number" id="ingreso-input" placeholder="Ingreso Total (ej. 2500)" required>
+                    <input type="number" id="gasto-input" placeholder="Gasto Total (ej. 1500)" required>
+                </div>
+                <button type="submit" class="btn-update">Actualizar Cosecha</button>
+            </form>
+        </section>
+
+        <section class="health-card">
+            <div class="card-header">
+                <span>Diagnóstico de Salud</span>
+                <span class="badge yellow">EN TRATAMIENTO</span>
+            </div>
+            <div class="score-value">45 <small>/100</small></div>
+            <div class="progress-bar">
+                <div class="fill" style="width: 45%;"></div>
+            </div>
+            <p class="status-msg">⚠️ Tu cosecha necesita atención urgente esta temporada.</p>
+        </section>
+
+        <div class="stats-grid">
+            <div class="mini-card green-text">
+                <span class="label">📈 INGRESOS</span>
+                <div class="val">$2,450</div>
+            </div>
+            <div class="mini-card red-text">
+                <span class="label">📉 GASTOS</span>
+                <div class="val">$1,890</div>
+            </div>
+        </div>
+
+        <section class="debt-card">
+            <span class="label">📋 NIVEL DE DEUDA</span>
+            <div class="debt-content">
+                <span class="val">$5,200</span>
+                <span class="badge orange">Moderado</span>
+            </div>
+        </section>
+
+        <section class="breakdown">
+            <h3>Desglose de Cultivo</h3>
+            <div class="category-item red-border">
+                <div class="icon">🏠</div>
+                <div class="info">
+                    <strong>Gastos Fijos</strong>
+                    <span>Renta, servicios, seguros</span>
+                </div>
+                <div class="amount">$1,200</div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
